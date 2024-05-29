@@ -1,0 +1,10 @@
+// models/User.js
+const mongoose = require('mongoose');
+const mongoURI = "mongodb://localhost:27017/testdb";
+mongoose.connect(mongoURI);
+
+const userSchema = new mongoose.Schema({
+ username: { type: String, unique: true, required: true },
+ password: { type: String, required: true },
+ });
+module.exports = mongoose.model('User', userSchema);
