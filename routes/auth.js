@@ -44,8 +44,5 @@ res.status(500).json({ error: 'Login failed' });
 }
 });
 
-router.post('/fd',verifyToken, (req, res)=>{
-    res.send("hi")
-})
 
 module.exports = router;
